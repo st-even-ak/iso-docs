@@ -1,0 +1,376 @@
+<ac:structured-macro ac:macro-id="94fadbdc-a2b5-402d-b25b-81b1aaa55967" ac:name="ui-tabs" ac:schema-version="1">
+  <ac:rich-text-body>
+    <ac:structured-macro ac:macro-id="4db0cee8-6a12-453d-93e4-6d2b77ab6e1a" ac:name="ui-tab" ac:schema-version="1">
+      <ac:parameter ac:name="title">Brief Information</ac:parameter>
+      <ac:rich-text-body>
+        <ac:structured-macro ac:macro-id="044a22e7-4809-46c3-b0dd-e13abea43802" ac:name="ui-text-box" ac:schema-version="1">
+          <ac:parameter ac:name="size">medium</ac:parameter>
+          <ac:rich-text-body>
+            <table class="wrapped relative-table" style="width: 95%;">
+              <colgroup> <col style="width: 10.0%;"/> <col style="width: 90.0%;"/> </colgroup>
+              <tbody>
+                <tr>
+                  <th colspan="2">Brief</th>
+                </tr>
+                <tr>
+                  <td>Name of this Brief</td>
+                  <td><at:var at:name="varBriefTitle"/></td>
+                </tr>
+                <tr>
+                  <td>Proposed By</td>
+                  <td><at:var at:name="varBriefProposer"/></td>
+                </tr>
+                <tr>
+                  <td>Business Area/Team</td>
+                  <td><at:var at:name="varBriefBusinessArea"/></td>
+                </tr>
+                <tr>
+                  <td>Contact email Address</td>
+                  <td><at:var at:name="varBriefEMailAddress"/></td>
+                </tr>
+                <tr>
+                  <td>Authorised by</td>
+                  <td><at:var at:name="varBriefAuthoriser"/></td>
+                </tr>
+                <tr>
+                  <td>Date</td>
+                  <td><at:var at:name="varBriefCreatedDate"/></td>
+                </tr>
+              </tbody>
+            </table>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+      </ac:rich-text-body>
+    </ac:structured-macro>
+    <ac:structured-macro ac:macro-id="02b183d2-f732-43c8-9186-c046663bb69b" ac:name="ui-tab" ac:schema-version="1">
+      <ac:parameter ac:name="title">Approval</ac:parameter>
+      <ac:rich-text-body>
+        <ac:structured-macro ac:macro-id="50116855-cb87-4867-8175-739c27cf3930" ac:name="ui-text-box" ac:schema-version="1">
+          <ac:parameter ac:name="size">medium</ac:parameter>
+          <ac:parameter ac:name="type">info</ac:parameter>
+          <ac:rich-text-body>
+            <ac:structured-macro ac:macro-id="504dc6c2-4780-4fbb-bcb6-565d6c3f2b93" ac:name="info" ac:schema-version="1">
+              <ac:parameter ac:name="icon">false</ac:parameter>
+              <ac:parameter ac:name="title">Technical Approver</ac:parameter>
+              <ac:rich-text-body>
+                <ac:structured-macro ac:macro-id="54b32e6e-c19b-4e9a-8faa-0d08141c7259" ac:name="text-data" ac:schema-version="1">
+                  <ac:parameter ac:name="name">Technical Approver</ac:parameter>
+                  <ac:parameter ac:name="type">line</ac:parameter>
+                  <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+                  <ac:rich-text-body>
+                    <p>
+                      <at:var at:name="varBriefTechnicalApprover"/>
+                    </p>
+                  </ac:rich-text-body>
+                </ac:structured-macro>
+              </ac:rich-text-body>
+            </ac:structured-macro>
+            <ac:structured-macro ac:macro-id="08b792c6-dc85-45e5-a60a-e7148092d649" ac:name="info" ac:schema-version="1">
+              <ac:parameter ac:name="icon">false</ac:parameter>
+              <ac:parameter ac:name="title">Commercial Approver</ac:parameter>
+              <ac:rich-text-body>
+                <ac:structured-macro ac:macro-id="4f1e7d7e-126a-4095-ba8b-af31f3b6f0e3" ac:name="text-data" ac:schema-version="1">
+                  <ac:parameter ac:name="name">Commercial Approver</ac:parameter>
+                  <ac:parameter ac:name="type">line</ac:parameter>
+                  <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+                  <ac:rich-text-body>
+                    <p>
+                      <at:var at:name="varBriefCommercialApprover"/>
+                    </p>
+                  </ac:rich-text-body>
+                </ac:structured-macro>
+              </ac:rich-text-body>
+            </ac:structured-macro>
+            <ac:structured-macro ac:macro-id="3c6021e1-a34c-4082-b8c5-722c48cdc6d6" ac:name="info" ac:schema-version="1">
+              <ac:parameter ac:name="icon">false</ac:parameter>
+              <ac:parameter ac:name="title">Client Approver</ac:parameter>
+              <ac:rich-text-body>
+                <ac:structured-macro ac:macro-id="64f12d78-2c22-469f-9c69-346f516b2f3f" ac:name="text-data" ac:schema-version="1">
+                  <ac:parameter ac:name="name">Client Approver</ac:parameter>
+                  <ac:parameter ac:name="type">line</ac:parameter>
+                  <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+                  <ac:rich-text-body>
+                    <p>
+                      <at:var at:name="varBriefClientApprover"/>
+                    </p>
+                  </ac:rich-text-body>
+                </ac:structured-macro>
+              </ac:rich-text-body>
+            </ac:structured-macro>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+      </ac:rich-text-body>
+    </ac:structured-macro>
+    <ac:structured-macro ac:macro-id="be267f42-1497-417e-89a6-44674c980faf" ac:name="ui-tab" ac:schema-version="1">
+      <ac:parameter ac:name="title">Summary</ac:parameter>
+      <ac:rich-text-body>
+        <ac:structured-macro ac:macro-id="8efacf81-75d1-4cee-b00d-bfb6c9b0850b" ac:name="info" ac:schema-version="1">
+          <ac:parameter ac:name="title">Summary description of the Proposed Project/Initative</ac:parameter>
+          <ac:rich-text-body>
+            <ac:structured-macro ac:macro-id="a34824e6-4e8a-44a8-9614-1ad37e58a37e" ac:name="text-data" ac:schema-version="1">
+              <ac:parameter ac:name="name">Description</ac:parameter>
+              <ac:parameter ac:name="content">text</ac:parameter>
+              <ac:parameter ac:name="required">true</ac:parameter>
+              <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+              <ac:rich-text-body>
+                <p>
+                  <br/>
+                </p>
+              </ac:rich-text-body>
+            </ac:structured-macro>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+        <ac:structured-macro ac:macro-id="43700dc8-9618-4149-9b98-2463cad3f908" ac:name="info" ac:schema-version="1">
+          <ac:parameter ac:name="title">Background</ac:parameter>
+          <ac:rich-text-body>
+            <ac:structured-macro ac:macro-id="992bf9b1-0351-47e3-ad99-edffa09e00b4" ac:name="text-data" ac:schema-version="1">
+              <ac:parameter ac:name="name">Background</ac:parameter>
+              <ac:parameter ac:name="content">text</ac:parameter>
+              <ac:parameter ac:name="required">true</ac:parameter>
+              <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+              <ac:rich-text-body>
+                <p>
+                  <br/>
+                </p>
+              </ac:rich-text-body>
+            </ac:structured-macro>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+      </ac:rich-text-body>
+    </ac:structured-macro>
+    <ac:structured-macro ac:macro-id="6ec37b41-9c30-4966-9fdb-7466a14e5966" ac:name="ui-tab" ac:schema-version="1">
+      <ac:parameter ac:name="title">Objectives &amp; Requirements</ac:parameter>
+      <ac:rich-text-body>
+        <ac:structured-macro ac:macro-id="565621b4-1159-4a36-8673-191e04a3015c" ac:name="info" ac:schema-version="1">
+          <ac:parameter ac:name="icon">false</ac:parameter>
+          <ac:parameter ac:name="title">Objectives</ac:parameter>
+          <ac:rich-text-body>
+            <ac:structured-macro ac:macro-id="745af11d-d94a-4e5c-96b4-9d5d3988643f" ac:name="text-data" ac:schema-version="1">
+              <ac:parameter ac:name="name">Objectives</ac:parameter>
+              <ac:parameter ac:name="content">text</ac:parameter>
+              <ac:parameter ac:name="required">true</ac:parameter>
+              <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+              <ac:rich-text-body>
+                <p>
+                  <br/>
+                </p>
+              </ac:rich-text-body>
+            </ac:structured-macro>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+        <ac:structured-macro ac:macro-id="cc12e54a-80ab-4592-b789-78c3e8f79cd2" ac:name="info" ac:schema-version="1">
+          <ac:parameter ac:name="icon">false</ac:parameter>
+          <ac:parameter ac:name="title">Key Business Requirements</ac:parameter>
+          <ac:rich-text-body>
+            <ac:structured-macro ac:macro-id="d0c3cdbd-1603-4b17-bb8e-bd2798f54536" ac:name="text-data" ac:schema-version="1">
+              <ac:parameter ac:name="name">Key Business Requirements</ac:parameter>
+              <ac:parameter ac:name="content">text</ac:parameter>
+              <ac:parameter ac:name="required">true</ac:parameter>
+              <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+              <ac:rich-text-body>
+                <p>
+                  <br/>
+                </p>
+              </ac:rich-text-body>
+            </ac:structured-macro>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+      </ac:rich-text-body>
+    </ac:structured-macro>
+    <ac:structured-macro ac:macro-id="e2b706e2-fa64-46ec-8e03-0c43b73164a4" ac:name="ui-tab" ac:schema-version="1">
+      <ac:parameter ac:name="title">Out of Scope</ac:parameter>
+      <ac:rich-text-body>
+        <ac:structured-macro ac:macro-id="9ae80ad4-9fba-42f5-a836-4a4be482ab70" ac:name="warning" ac:schema-version="1">
+          <ac:parameter ac:name="icon">false</ac:parameter>
+          <ac:parameter ac:name="title">Out of Scope</ac:parameter>
+          <ac:rich-text-body>
+            <ac:structured-macro ac:macro-id="f3ef204d-c7f7-4a18-8f5d-f3dba7829c8c" ac:name="text-data" ac:schema-version="1">
+              <ac:parameter ac:name="name">Out of Scope</ac:parameter>
+              <ac:parameter ac:name="content">text</ac:parameter>
+              <ac:parameter ac:name="required">true</ac:parameter>
+              <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+              <ac:rich-text-body>
+                <p>
+                  <br/>
+                </p>
+              </ac:rich-text-body>
+            </ac:structured-macro>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+      </ac:rich-text-body>
+    </ac:structured-macro>
+    <ac:structured-macro ac:macro-id="4daf812c-0fcb-4f51-bd18-d34d28714f35" ac:name="ui-tab" ac:schema-version="1">
+      <ac:parameter ac:name="title">Business Requirements</ac:parameter>
+      <ac:rich-text-body>
+        <ac:structured-macro ac:macro-id="cd658991-dea0-49e5-bd8c-07ec553f18fb" ac:name="info" ac:schema-version="1">
+          <ac:parameter ac:name="icon">false</ac:parameter>
+          <ac:parameter ac:name="title">Expected Business Requirements</ac:parameter>
+          <ac:rich-text-body>
+            <ac:structured-macro ac:macro-id="5f9ac50f-4606-4258-92fc-57d7693ed9fb" ac:name="text-data" ac:schema-version="1">
+              <ac:parameter ac:name="name">Expected Business Benefits</ac:parameter>
+              <ac:parameter ac:name="content">text</ac:parameter>
+              <ac:parameter ac:name="required">true</ac:parameter>
+              <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+              <ac:rich-text-body>
+                <p>
+                  <br/>
+                </p>
+              </ac:rich-text-body>
+            </ac:structured-macro>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+      </ac:rich-text-body>
+    </ac:structured-macro>
+    <ac:structured-macro ac:macro-id="bb1e670d-25f4-46c6-bb90-ad1b3d334338" ac:name="ui-tab" ac:schema-version="1">
+      <ac:parameter ac:name="title">Timeframe, Risks and Dependencies</ac:parameter>
+      <ac:rich-text-body>
+        <ac:structured-macro ac:macro-id="ee84fb2e-9eb4-4360-ae59-5958f21316c0" ac:name="warning" ac:schema-version="1">
+          <ac:parameter ac:name="icon">false</ac:parameter>
+          <ac:parameter ac:name="title">Any Critical Timeframe</ac:parameter>
+          <ac:rich-text-body>
+            <ac:structured-macro ac:macro-id="30e6c9fe-3f68-41b3-8c0d-e88feb56fe47" ac:name="date-data" ac:schema-version="1">
+              <ac:parameter ac:name="format">d MMMM yyyy</ac:parameter>
+              <ac:parameter ac:name="name">Any Critical Timeframe</ac:parameter>
+              <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+            </ac:structured-macro>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+        <ac:structured-macro ac:macro-id="6a4b11e1-3aa0-4262-b74f-cdea1986bfc0" ac:name="warning" ac:schema-version="1">
+          <ac:parameter ac:name="icon">false</ac:parameter>
+          <ac:parameter ac:name="title">Any Known, Significant Risks</ac:parameter>
+          <ac:rich-text-body>
+            <ac:structured-macro ac:macro-id="0d92410a-2af6-4291-a172-fe2a32296ad6" ac:name="text-data" ac:schema-version="1">
+              <ac:parameter ac:name="name">Risks</ac:parameter>
+              <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+              <ac:rich-text-body>
+                <p>
+                  <br/>
+                </p>
+              </ac:rich-text-body>
+            </ac:structured-macro>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+        <ac:structured-macro ac:macro-id="cc0947aa-bb99-4d72-b619-089db3f54e48" ac:name="warning" ac:schema-version="1">
+          <ac:parameter ac:name="icon">false</ac:parameter>
+          <ac:parameter ac:name="title">Any Known contraints and / or Dependencies / Impacts</ac:parameter>
+          <ac:rich-text-body>
+            <ac:structured-macro ac:macro-id="e723e4e5-e562-4d36-8225-1c719e8dd6e2" ac:name="text-data" ac:schema-version="1">
+              <ac:parameter ac:name="name">Constraints</ac:parameter>
+              <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+              <ac:rich-text-body>
+                <p>
+                  <br/>
+                </p>
+              </ac:rich-text-body>
+            </ac:structured-macro>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+      </ac:rich-text-body>
+    </ac:structured-macro>
+    <ac:structured-macro ac:macro-id="fc8b9911-207f-4b6c-a2fe-f3bdb198a65f" ac:name="ui-tab" ac:schema-version="1">
+      <ac:parameter ac:name="title">Security Considerations</ac:parameter>
+      <ac:rich-text-body>
+        <ac:structured-macro ac:macro-id="6c36521f-67f9-4f1e-af0b-66328efac9e6" ac:name="warning" ac:schema-version="1">
+          <ac:parameter ac:name="title">Security Considerations</ac:parameter>
+          <ac:rich-text-body>
+            <p>
+              <br/>
+            </p>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+      </ac:rich-text-body>
+    </ac:structured-macro>
+    <ac:structured-macro ac:macro-id="d55caaa3-6a0d-44f6-b995-f38dcb1271af" ac:name="ui-tab" ac:schema-version="1">
+      <ac:parameter ac:name="title">Stakeholders</ac:parameter>
+      <ac:rich-text-body>
+        <ac:structured-macro ac:macro-id="1b3871e4-33d3-43a9-910e-19503787c100" ac:name="info" ac:schema-version="1">
+          <ac:parameter ac:name="icon">false</ac:parameter>
+          <ac:parameter ac:name="title">Business Stakeholders</ac:parameter>
+          <ac:rich-text-body>
+            <ac:structured-macro ac:macro-id="0be94a39-a0a5-4b9c-97e4-552684007021" ac:name="text-data" ac:schema-version="1">
+              <ac:parameter ac:name="name">Business Stakeholders</ac:parameter>
+              <ac:parameter ac:name="content">text</ac:parameter>
+              <ac:parameter ac:name="required">true</ac:parameter>
+              <ac:parameter ac:name="atlassian-macro-output-type">INLINE</ac:parameter>
+              <ac:rich-text-body>
+                <p>
+                  <br/>
+                </p>
+              </ac:rich-text-body>
+            </ac:structured-macro>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+      </ac:rich-text-body>
+    </ac:structured-macro>
+    <ac:structured-macro ac:macro-id="1b0551c2-7ca4-4e40-a5d2-2e1fd0e23db8" ac:name="ui-tab" ac:schema-version="1">
+      <ac:parameter ac:name="title">Reference Documents</ac:parameter>
+      <ac:rich-text-body>
+        <ac:structured-macro ac:macro-id="57dfad55-fb32-4b1e-a0e5-f11013b7290e" ac:name="info" ac:schema-version="1">
+          <ac:parameter ac:name="title">Further Reference Documents</ac:parameter>
+          <ac:rich-text-body>
+            <p>
+              <ac:structured-macro ac:macro-id="69e15bbc-3bf8-445c-a664-678b0746ef13" ac:name="attachment-data" ac:schema-version="1">
+                <ac:parameter ac:name="name">attachments</ac:parameter>
+              </ac:structured-macro>
+            </p>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+      </ac:rich-text-body>
+    </ac:structured-macro>
+    <ac:structured-macro ac:macro-id="d1c4e173-6c25-40c7-aa22-bbf1377df642" ac:name="ui-tab" ac:schema-version="1">
+      <ac:parameter ac:name="title">Purpose &amp; Document Control</ac:parameter>
+      <ac:rich-text-body>
+        <ac:structured-macro ac:macro-id="da737305-bd7c-4eeb-b100-e39fa9a7aab9" ac:name="info" ac:schema-version="1">
+          <ac:parameter ac:name="icon">false</ac:parameter>
+          <ac:parameter ac:name="title">Purpose of this document</ac:parameter>
+          <ac:rich-text-body>
+            <p>The purpose of this document is for the proposer of a new initiative desiring work from ITG, to provide some initial briefing information about their proposal to ITG Creator.</p>
+            <p>This initial Brief should include the key objectives of the proposed project, the potential anticipated benefits (opportunities it will enable to be maximised or problems it is seeking to address), and any particular constraints, dependencies, mission-critical or regulatory timings the proposer may be aware of and wish to highlight. </p>
+            <p>The document should describe your key business needs, outlining what you are seeking to be able to do and achieve via the initiative.</p>
+            <p>The Brief should be sufficient to be used as an initial reference for a first evaluation to be conducted with ITG Creator, in order for ITG Creator to asses, consult with you and follow-up with a proposal of possible solution route(s) and an associated initial work-sizing and pricing estimate in response.</p>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+        <ac:structured-macro ac:macro-id="6ff85837-d237-4c2d-b05d-b8253d2cafb9" ac:name="info" ac:schema-version="1">
+          <ac:parameter ac:name="icon">false</ac:parameter>
+          <ac:parameter ac:name="title">Document Control</ac:parameter>
+          <ac:rich-text-body>
+            <ul>
+              <li>Document Control Statement<ul>
+                  <li>
+                    <p>The following outlines the access, handling, communication and disposal guidelines that are followed by The Information Assurance Programme for this document based on the assigned classification. For this document, which has a classification of <strong>CONFIDENTIAL</strong>, the following is recommended:</p>
+                    <ul>
+                      <li>
+                        <p>Access Guidelines</p>
+                        <ul>
+                          <li>CONFIDENTIAL. Please refer to corporate policy for further details.</li>
+                        </ul>
+                      </li>
+                      <li>Handling Guidelines<br/>
+                        <ul>
+                          <li>Documents will be stored on the ITG Creator Confluence system.</li>
+                          <li>Where hardcopies of documents are created, they will be stored under lock and key.</li>
+                        </ul>
+                      </li>
+                      <li>Communications Guidelines<br/>
+                        <ul>
+                          <li>Documents which are to be communicated external to ITG Creator must be produced in protected PDF format, with the ‘copy text’ function disabled.</li>
+                          <li>Documents that are created within the Microsoft office suite of products must have ‘Information Rights Management’ enabled, where possible, to control distribution within ITG Creator</li>
+                          <li>Documents that are communicated external to ITG Creator must be done so in line with corporate policy.</li>
+                        </ul>
+                      </li>
+                      <li>Disposal Guidelines<br/>
+                        <ul>
+                          <li>All copies of this document will be disposed of in line with corporate policy.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </ac:rich-text-body>
+        </ac:structured-macro>
+      </ac:rich-text-body>
+    </ac:structured-macro>
+  </ac:rich-text-body>
+</ac:structured-macro>

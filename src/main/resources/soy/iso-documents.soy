@@ -1,0 +1,267 @@
+{namespace com.itg.plugins.iso.blueprints}
+/**
+*	Template creation first page
+*	Choose a template to complete
+*/
+{template .templateSelectionForm}
+	<form id="templateSelectionForm" action="#" method="post" class="aui">
+		<div>
+			{getText('iso.blueprint.brief.wizard.templateSelectionForm.desc.content')}
+		</div>
+		<fieldset>
+			<div class="field-group">
+			<label for="templatekey">{getText('iso.blueprint.brief.wizard.templateSelectionForm.label.templatekey')}</label>
+			    <select id="templatekey" class="select" name="templatekey">
+			        <option value="{getText('iso.blueprint.brief.wizard.templateSelectionForm.templateOption.key')}">
+			        	{getText('iso.blueprint.brief.wizard.templateSelectionForm.templateOption.title')}
+			        </option>
+			        <option value="{getText('iso.blueprint.release-note.wizard.templateSelectionForm.templateOption.key')}">
+			        	{getText('iso.blueprint.release-note.wizard.templateSelectionForm.templateOption.title')}
+			        </option>
+			    </select>
+			</div>
+			<div class="field-group">
+			    <label for="clientkey">{getText('iso.blueprint.brief.wizard.templateSelectionForm.label.client')}</label>
+			    <select id="clientkey" class="select" name="clientkey">
+			    	<!-- need to drive this list dynamically with list and logos -->
+			        <option value="client-id-TUI">TUI</option>
+			        <option value="client-id-LG">LG</option>
+			        <option value="client-id-MSD">MSD</option>
+			    </select>
+			</div>
+		</fieldset>
+	</form>
+{/template}
+/**
+*	Sets the properties of the brief
+*/
+{template .briefProperties}
+    <form id="briefProperties" action="#" method="post" class="aui">
+      <fieldset>
+        <div class="field-group">
+            <label for="varBriefTitle">{getText('iso.blueprint.form.label.title.varBriefTitle')}</label>
+            <input id="varBriefTitle" class="text" type="text" name="varBriefTitle"><span style="color:red">*</span>
+            <div id="varBriefTitle" class="error"></div>
+			<label for="varBriefProposer">{getText('iso.blueprint.form.label.title.varBriefProposer')}</label>
+            <input id="varBriefProposer" class="text" type="text" name="varBriefProposer"><span style="color:red">*</span><br />
+            <div id="varBriefProposer" class="error"></div>
+            <label for="varBriefBusinessArea">{getText('iso.blueprint.form.label.title.varBriefBusinessArea')}</label>
+            <input id="varBriefBusinessArea" class="text" type="text" name="varBriefBusinessArea"><span style="color:red">*</span><br />
+            <div id="varBriefBusinessArea" class="error"></div>
+            <label for="varBriefEmailAddress">{getText('iso.blueprint.form.label.title.varBriefEmailAddress')}</label>
+            <input id="varBriefEmailAddress" class="text" type="text" name="varBriefEmailAddress"><span style="color:red">*</span><br />
+            <div id="varBriefEmailAddress" class="error"></div>
+            <label for="varBriefAuthoriser">{getText('iso.blueprint.form.label.title.varBriefAuthoriser')}</label>
+            <input id="varBriefAuthoriser" class="text" type="text" name="varBriefAuthoriser"><span style="color:red">*</span><br />
+            <div id="varBriefAuthoriser" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the Summary of details
+*/
+{template .briefSummary}
+    <form id="briefSummary" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('iso.blueprint.form.label.title.wiki-markup-briefSummary')}
+	        </div>
+	        <textarea id="wiki-markup-briefSummary" name="wikiBriefSummary"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefSummary" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the background
+*/
+{template .briefBackground}
+    <form id="briefBackground" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('iso.blueprint.form.label.title.wiki-markup-briefBackground')}
+	        </div>
+	        <textarea id="wiki-markup-briefBackground" name="wikiBriefBackground"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefBackground" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the main objectives
+*/
+{template .briefObjectives}
+    <form id="briefObjectives" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('iso.blueprint.form.label.title.wiki-markup-briefObjectives')}
+	        </div>
+	        <textarea id="wiki-markup-briefObjectives" name="wikiBriefObjectives"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefObjectives" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the Key Business Requirements
+*/
+{template .briefRequirements}
+    <form id="briefRequirements" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('iso.blueprint.form.label.title.wiki-markup-briefRequirements')}
+	        </div>
+	        <textarea id="wiki-markup-briefRequirements" name="wikiBriefRequirements"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefRequirements" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the details of scope
+*/
+{template .briefScope}
+    <form id="briefScope" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('iso.blueprint.form.label.title.wiki-markup-briefScope')}
+	        </div>
+	        <textarea id="wiki-markup-briefScope" name="wikiBriefScope"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefScope" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter a description of the Benefits
+*/
+{template .briefBenefits}
+    <form id="briefBenefits" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('iso.blueprint.form.label.title.wiki-markup-briefBenefits')}
+	        </div>
+	        <textarea id="wiki-markup-briefBenefits" name="wikiBriefBenefits"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefBenefits" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the Timeframe
+*/
+{template .briefTimeframe}
+    <form id="briefTimeframe" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('iso.blueprint.form.label.title.wiki-markup-briefTimeframe')}
+	        </div>
+	        <textarea id="wiki-markup-briefTimeframe" name="wikiBriefTimeframe"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefTimeframe" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter details of any known risks
+*/
+{template .briefRisks}
+    <form id="briefRisks" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('iso.blueprint.form.label.title.wiki-markup-briefRisks')}
+	        </div>
+	        <textarea id="wiki-markup-briefRisks" name="wikiBriefRisks"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefRisks" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter details of any known constraints
+*/
+{template .briefConstraints}
+    <form id="briefConstraints" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('iso.blueprint.form.label.title.wiki-markup-briefConstraints')}
+	        </div>
+	        <textarea id="wiki-markup-briefConstraints" name="wikiBriefConstraints"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefConstraints" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter details of key stakeholders
+*/
+{template .briefStakeholders}
+    <form id="briefStakeholders" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('iso.blueprint.form.label.title.wiki-markup-briefStakeholders')}
+	        </div>
+	        <textarea id="wiki-markup-briefStakeholders" name="wikiBriefStakeholders"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefStakeholders" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*
+*
+*
+*	Release-note
+*
+*
+*
+*/
+{template .releaseNoteProperties}
+    <form action="#" id="releaseNoteProperties" method="post" class="aui">
+      <fieldset>
+        <div class="field-group">
+			<label for="varBriefProposer">{getText('iso.blueprint.form.label.title.varBriefProposer')}</label>
+            <input id="varBriefProposer" class="text" type="text" name="varBriefProposer"><span style="color:red">*</span><br />
+            <label for="varBriefEMailAddress">{getText('iso.blueprint.form.label.title.varBriefEMailAddress')}</label>
+            <input id="varBriefEMailAddress" class="text" type="text" name="varBriefEMailAddress"><span style="color:red">*</span><br />
+            <div class="error"></div>
+            <label for="varBriefAuthoriser">{getText('iso.blueprint.form.label.title.varBriefAuthoriser')}</label>
+            <input id="varBriefAuthoriser" class="text" type="text" name="varBriefAuthoriser"><span style="color:red">*</span><br />
+            <div class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*
+*
+*
+*	Change-Request
+*
+*
+*
+*/
+{template .changeRequestProperties}
+    <form action="#" id="changerequestProperties" method="post" class="aui">
+      <fieldset>
+        <div class="field-group">
+			<label for="varBriefProposer">{getText('iso.blueprint.form.label.title.varBriefProposer')}</label>
+            <input id="varBriefProposer" class="text" type="text" name="varBriefProposer"><span style="color:red">*</span><br />
+            <label for="varBriefEMailAddress">{getText('iso.blueprint.form.label.title.varBriefEMailAddress')}</label>
+            <input id="varBriefEMailAddress" class="text" type="text" name="varBriefEMailAddress"><span style="color:red">*</span><br />
+            <div class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}

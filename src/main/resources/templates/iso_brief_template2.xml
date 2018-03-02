@@ -1,0 +1,155 @@
+<div>
+<ac:structured-macro ac:macro-id="727e592b-d232-4d8a-bf99-f1fde7cbc5a4" ac:name="panel" ac:schema-version="1">
+  <ac:rich-text-body>
+	<table class="wrapped relative-table" style="width: 95%;">
+	  <colgroup> <col style="width: 10.0%;"/> <col style="width: 90.0%;"/> </colgroup>
+	  <tbody>
+	    <tr>
+	      <th colspan="2">Brief</th>
+	    </tr>
+	    <tr>
+	      <td>Name of this Brief</td>
+	      <td><at:var at:name="varBriefTitle"/></td>
+	    </tr>
+	    <tr>
+	      <td>Proposed By</td>
+	      <td><at:var at:name="varBriefProposer"/></td>
+	    </tr>
+	    <tr>
+	      <td>Business Area/Team</td>
+	      <td><at:var at:name="varBriefBusinessArea"/></td>
+	    </tr>
+	    <tr>
+	      <td>Contact email Address</td>
+	      <td><at:var at:name="varBriefEMailAddress"/></td>
+	    </tr>
+	    <tr>
+	      <td>Authorised by</td>
+	      <td><at:var at:name="varBriefAuthoriser"/></td>
+	    </tr>
+	    <tr>
+	      <td>Date</td>
+	      <td><at:var at:name="varBriefCreatedDate"/></td>
+	    </tr>
+	  </tbody>
+	</table>
+  </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="9e886cc7-1781-4805-8299-3ba0a5afe4a5" ac:name="panel" ac:schema-version="1">
+  <ac:rich-text-body>
+    <h2>Description</h2>
+    <at:var at:name="wikiBriefSummaryXhtml" at:rawXhtml='true'/>
+  </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="6d5462d3-14a7-4e94-8f8e-bbd18e4aae1b" ac:name="panel" ac:schema-version="1">
+  <ac:rich-text-body>
+    <h2>Background</h2>
+    <at:var at:name="wikiBriefBackgroundXhtml" at:rawXhtml='true'/>
+  </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="e4a1ab0c-0bc2-46e5-9eef-5783234b2181" ac:name="panel" ac:schema-version="1">
+  <ac:rich-text-body>
+    <h2>Objectives &amp; Requirements</h2>
+    <at:var at:name="wikiBriefObjectivesXhtml" at:rawXhtml='true'/>
+  </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="ddb777e5-3b70-4b8b-9f2e-8756df3229b2" ac:name="panel" ac:schema-version="1">
+  <ac:rich-text-body>
+    <h2>Key Business Requirements</h2>
+    <at:var at:name="wikiBriefRequirementsXhtml" at:rawXhtml='true'/>
+  </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="6feb0df3-e2e1-4876-9200-86e416d8ad3f" ac:name="panel" ac:schema-version="1">
+  <ac:rich-text-body>
+    <h2>Expected Business Benefits and / or Success Factors</h2>
+    <at:var at:name="wikiBriefBenefitsXhtml" at:rawXhtml='true'/>
+  </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="445d43b3-b30d-426d-ae10-d9ee1c1688c8" ac:name="panel" ac:schema-version="1">
+  <ac:rich-text-body>
+    <h2>Any Critical Timeframe</h2>
+    <at:var at:name="wikiBriefTimeFrameXhtml" at:rawXhtml='true'/>
+  </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="574e21d8-831b-44a8-beef-19fe0fe766a8" ac:name="panel" ac:schema-version="1">
+  <ac:rich-text-body>
+    <h2>Any Known, Significant Risks</h2>
+    <at:var at:name="wikiBriefRisksXhtml" at:rawXhtml='true'/>
+  </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="25d172f1-7d19-4950-861c-7c8490b64602" ac:name="panel" ac:schema-version="1">
+  <ac:rich-text-body>
+    <h2>
+      Any Known Constraints and/or Dependencies/Impacts
+    </h2>
+    <at:var at:name="wikiBriefConstraintsXhtml" at:rawXhtml='true'/>
+  </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="b3608e6e-6257-47be-a4b4-35d523446229" ac:name="panel" ac:schema-version="1">
+  <ac:rich-text-body>
+    <h2>Business Stakeholders</h2>
+    <at:var at:name="wikiBriefStakeholdersXhtml" at:rawXhtml='true'/>
+  </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="c02bf2d1-abb6-489d-b84c-7a9e30fd3726" ac:name="panel" ac:schema-version="1">
+    <h2>
+      <span>Further Reference Documents </span>
+    </h2>
+    <p>
+      <ac:structured-macro ac:macro-id="c38c84ae-e792-4d14-87e9-f0d6e9241085" ac:name="attachments" ac:schema-version="1"/>
+    </p>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="631c6cd8-cf44-4a9e-b171-8c52acf1583a" ac:name="panel" ac:schema-version="1">
+    <h2>Document Control</h2>
+    <h3>Purpose of this Document</h3>
+    <p>The purpose of this document is for the proposer of a new initiative desiring work from ITG, to provide some initial briefing information about their proposal to ITG.<br />
+    This initial Brief should include the key objectives of the proposed project, the potential anticipated benefits (opportunities it will enable to be maximised or problems it is seeking to address), and any particular constraints, dependencies, mission-critical or regulatory timings the proposer may be aware of and wish to highlight. </p>
+    The document should describe your key business needs, outlining what you are seeking to be able to do and achieve via the initiative.<br />
+    The Brief should be sufficient to be used as an initial reference for a first evaluation to be conducted with ITG, in order for ITG to asses, consult with you and follow-up with a proposal of possible solution route(s) and an associated initial work-sizing and pricing estimate in response.<br />
+    <h3>
+      <strong>Documents Control Statement</strong>
+    </h3>
+    <p>The following outlines the access, handling, communication and disposal guidelines that are followed by The Information Assurance Programme for this document based on the assigned classification. For this document, which has a classification of <strong>CONFIDENTIAL</strong>, the following is recommended:</p>
+    <h4>Access Guidelines</h4>
+    <ul>
+      <li>
+        CONFIDENTIAL. Please refer to corporate policy for further details.
+      </li>
+    </ul>
+    <h4>Handling Guidelines</h4>
+    <ul>
+      <li>
+        Documents will be stored on the ITG SharePoint system.
+      </li>
+      <li>
+        Where hardcopies of documents are created, they will be stored under lock and key.
+      </li>
+    </ul>
+    <h4>Communications Guidelines</h4>
+    <ul>
+      <li>
+        Documents which are to be communicated external to ITG must be produced in protected PDF format, with the ‘copy text’ function disabled.
+      </li>
+      <li>
+        Documents that are created within the Microsoft office suite of products must have ‘Information Rights Management’ enabled, where possible, to control distribution within ITG
+      </li>
+      <li>
+        Documents that are communicated external to ITG must be done so in line with corporate policy.
+      </li>
+    </ul>
+    <h4>Disposal Guidelines</h4>
+    <ul>
+      <li>
+        All copies of this document will be disposed of in line with corporate policy.
+      </li>
+    </ul>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="969d3d0b-8516-42ee-8038-8600d020f2a5" ac:name="panel" ac:schema-version="1">
+  <ac:rich-text-body>
+    <h2>Version History</h2>
+    <p>
+      <ac:structured-macro ac:macro-id="7d0df656-6882-4e5b-8393-9541332dc4bd" ac:name="change-history" ac:schema-version="1"/>
+    </p>
+  </ac:rich-text-body>
+</ac:structured-macro>
+</div>

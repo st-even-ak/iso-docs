@@ -1,0 +1,136 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+
+    					
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="iso-documents.properties" location="iso-documents"/>
+    
+    
+    <!-- add our web resources -->
+    <web-resource key="iso-documents-resources" name="iso-documents Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <dependency>com.atlassian.confluence.plugins.confluence-create-content-plugin:resources</dependency>
+        
+        <transformation extension="js">
+            <transformer key="jsI18n"/>
+        </transformation>
+        
+        <!-- transform Soy templates into JS -->
+        <transformation extension="soy">
+            <transformer key="soyTransformer">
+                <functions>com.atlassian.confluence.plugins.soy:soy-core-functions
+                </functions>
+            </transformer>
+        </transformation>
+        
+        <resource type="download" name="iso-documents.css" location="/css/iso-documents.css" />
+        <resource type="download" name="iso-documents.js" location="/js/iso-documents.js" />
+        <resource type="download" name="iso-documents.soy.js" location="/soy/iso-documents.soy" />
+        <resource type="download" name="images/" location="/images" />
+
+        <context>iso-documents</context>
+        <context>atl.general</context>
+        <context>atl.admin</context>
+    </web-resource>
+    
+        <!-- Add to the Create Menu -->
+    <web-item key="create-iso-document" i18n-name-key="iso.create.document.name" section="system.create.dialog/content">
+        <description key="iso.create.document.description" />
+        <resource name="icon" type="download" location="/images/iso12007.png" />
+        <param name="blueprintKey" value="iso-blueprint" />
+    </web-item>
+   
+    <!-- Blueprint -->
+    <blueprint key="iso-blueprint" i18n-name-key='iso-blueprint' index-key="create-iso-document-index"><!-- create-result="view"  -->
+        <content-template ref="iso-brief-template" />
+        <content-template ref="iso-release-note-template" />
+        <content-template ref="iso-change-request-template" />
+        <dialog-wizard key="iso-blueprint-wizard">
+            <dialog-page id="templateSelectionForm" template-key="com.itg.plugins.iso.blueprints.templateSelectionForm"
+                title-key="iso.blueprint.brief.wizard.templateSelectionForm.title" 
+                description-header-key="iso.blueprint.brief.wizard.templateSelectionForm.desc.header"
+                description-content-key="iso.blueprint.brief.wizard.templateSelectionForm.desc.content"/>
+        	<!-- Brief Wizard Path Pages -->
+            <dialog-page id="briefProperties" template-key="com.itg.plugins.iso.blueprints.briefProperties"
+                title-key="iso.blueprint.brief.wizard.briefProperties.title" 
+                description-header-key="iso.blueprint.brief.wizard.briefProperties.desc.header"
+                description-content-key="iso.blueprint.brief.wizard.briefProperties.desc.content"/>
+            <dialog-page id="briefSummary" template-key="com.itg.plugins.iso.blueprints.briefSummary" 
+                title-key="iso.blueprint.brief.wizard.briefSummary.title" 
+                description-header-key="iso.blueprint.brief.wizard.briefSummary.desc.header"
+                description-content-key="iso.blueprint.brief.wizard.briefSummary.desc.content"/>
+            <dialog-page id="briefBackground" template-key="com.itg.plugins.iso.blueprints.briefBackground"
+                title-key="iso.blueprint.brief.wizard.briefBackground.title" 
+                description-header-key="iso.blueprint.brief.wizard.briefBackground.desc.header"
+                description-content-key="iso.blueprint.brief.wizard.briefBackground.desc.content"/>
+            <dialog-page id="briefObjectives" template-key="com.itg.plugins.iso.blueprints.briefObjectives" 
+                title-key="iso.blueprint.brief.wizard.briefObjectives.title" 
+                description-header-key="iso.blueprint.brief.wizard.briefObjectives.desc.header"
+                description-content-key="iso.blueprint.brief.wizard.briefObjectives.desc.content"/>
+            <dialog-page id="briefRequirements" template-key="com.itg.plugins.iso.blueprints.briefRequirements"
+                title-key="iso.blueprint.brief.wizard.briefRequirements.title" 
+                description-header-key="iso.blueprint.brief.wizard.briefRequirements.desc.header"
+                description-content-key="iso.blueprint.brief.wizard.briefRequirements.desc.content"/>
+            <dialog-page id="briefBenefits" template-key="com.itg.plugins.iso.blueprints.briefBenefits" 
+                title-key="iso.blueprint.brief.wizard.briefBenefits.title" 
+                description-header-key="iso.blueprint.brief.wizard.briefBenefits.desc.header"
+                description-content-key="iso.blueprint.brief.wizard.briefBenefits.desc.content"/>
+            <dialog-page id="briefScope" template-key="com.itg.plugins.iso.blueprints.briefScope"
+                title-key="iso.blueprint.brief.wizard.briefScope.title" 
+                description-header-key="iso.blueprint.brief.wizard.briefScope.desc.header"
+                description-content-key="iso.blueprint.brief.wizard.briefScope.desc.content"/>
+            <dialog-page id="briefTimeframe" template-key="com.itg.plugins.iso.blueprints.briefTimeframe" 
+                title-key="iso.blueprint.brief.wizard.briefTimeframe.title" 
+                description-header-key="iso.blueprint.brief.wizard.briefTimeframe.desc.header"
+                description-content-key="iso.blueprint.brief.wizard.briefTimeframe.desc.content"/>
+            <dialog-page id="briefRisks" template-key="com.itg.plugins.iso.blueprints.briefRisks"
+                title-key="iso.blueprint.brief.wizard.briefRisks.title" 
+                description-header-key="iso.blueprint.brief.wizard.briefRisks.desc.header"
+                description-content-key="iso.blueprint.brief.wizard.briefRisks.desc.content"/>
+            <dialog-page id="briefConstraints" template-key="com.itg.plugins.iso.blueprints.briefConstraints" 
+                title-key="iso.blueprint.brief.wizard.briefConstraints.title" 
+                description-header-key="iso.blueprint.brief.wizard.briefConstraints.desc.header"
+                description-content-key="iso.blueprint.brief.wizard.briefConstraints.desc.content"/>
+            <dialog-page id="briefStakeholders" template-key="com.itg.plugins.iso.blueprints.briefStakeholders" 
+                title-key="iso.blueprint.brief.wizard.briefStakeholders.title" 
+                description-header-key="iso.blueprint.brief.wizard.briefStakeholders.desc.header"
+                description-content-key="iso.blueprint.brief.wizard.briefStakeholders.desc.content"
+                last="true"/>
+                
+        	<!-- ReleaseNote Wizard Path Pages -->
+            <dialog-page id="releaseNoteProperties" template-key="com.itg.plugins.iso.blueprints.releaseNoteProperties" 
+                title-key="iso.blueprint.release-note.wizard.releaseNoteProperties.title" 
+                description-header-key="iso.blueprint.release-note.wizard.releaseNoteProperties.desc.header"
+                description-content-key="iso.blueprint.release-note.wizard.releaseNoteProperties.desc.content" />
+                
+        	<!-- ChangeRequest Wizard Path Pages -->
+            <dialog-page id="changeRequestProperties" template-key="com.itg.plugins.iso.blueprints.changeRequestProperties" 
+                title-key="iso.blueprint.change-request.wizard.changeRequestProperties.title" 
+                description-header-key="iso.blueprint.change-request.wizard.changeRequestProperties.desc.header"
+                description-content-key="iso.blueprint.change-request.wizard.changeRequestProperties.desc.content" />
+        </dialog-wizard>
+    </blueprint>
+    
+    <!-- Template for Brief -->	
+    <content-template key="iso-brief-template" i18n-name-key="iso-brief-template" template-title-key="iso.blueprint.brief.title">
+        <resource name="template" type="download" location="/templates/iso_brief_template2.xml" />
+    </content-template>
+    
+    <!-- Template for Release Note -->
+    <content-template key="iso-release-note-template" i18n-name-key="iso-release-note-template" template-title-key="iso.blueprint.release-note.title">
+        <resource name="template" type="download" location="/templates/iso_release_note_template.xml" />
+    </content-template>
+    
+    <!-- Template for Change Request  -->
+    <content-template key="iso-change-request-template" i18n-name-key="iso-change-request-template" template-title-key="iso.blueprint.change-request.title">
+        <resource name="template" type="download" location="/templates/iso_change_request_template.xml" />
+    </content-template>
+
+</atlassian-plugin>
