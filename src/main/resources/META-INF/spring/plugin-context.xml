@@ -7,5 +7,4 @@
         http://www.atlassian.com/schema/atlassian-scanner
         http://www.atlassian.com/schema/atlassian-scanner/atlassian-scanner.xsd">
     <atlassian-scanner:scan-indexes/>
-    <includeExclude>-com.atlassian.plugin.spring.scanner.annotation.*</includeExclude>
 </beans>
