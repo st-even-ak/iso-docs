@@ -1,11 +1,5 @@
 package com.itg.plugins.confluence.iso.impl;
 
-import org.osgi.service.component.annotations.Component;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.atlassian.confluence.plugins.createcontent.api.events.BlueprintPageCreateEvent;
 import com.atlassian.confluence.plugins.createcontent.impl.ContentBlueprint;
 import com.atlassian.event.api.EventListener;
@@ -14,6 +8,10 @@ import com.atlassian.plugin.ModuleCompleteKey;
 import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Component
 public class IsoTemplateListener implements InitializingBean, DisposableBean {

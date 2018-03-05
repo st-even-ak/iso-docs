@@ -1,2 +1,7 @@
 src/main/java/com/itg/plugins/confluence/iso/api/IsoDocumentService.java
 src/main/java/com/itg/plugins/confluence/iso/impl/IsoTemplateContextProvider.java
+
+target/
+.idea
+.classpath
+.project
