@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="com/itg/plugins/confluence/iso/impl/IsoDocumentServiceImpl.java|com/itg/plugins/confluence/iso/impl/IsoTemplateContextProvider.java" including="**/*.java" kind="src" path="src/main/java"/>
+	<classpathentry excluding="com/itg/plugins/confluence/iso/impl/IsoTemplateContextProvider.java|com/itg/plugins/confluence/iso/impl/IsoDocumentServiceImpl.java" including="**/*.java" kind="src" path="src/main/java"/>
 	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
 	<classpathentry kind="var" path="M2_REPO/javax/mail/mail/1.4.5/mail-1.4.5.jar" sourcepath="M2_REPO/javax/mail/mail/1.4.5/mail-1.4.5-sources.jar">
 		<attributes>
@@ -1192,5 +1192,6 @@
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/steve.killelay/.m2/repository/com/atlassian/upm/upm-api/2.15/upm-api-2.15-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/steve.killelay/Downloads/org.springframework.context-3.0.4.release.jar/org.springframework.context-3.0.4.release.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

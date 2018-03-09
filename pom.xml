@@ -105,6 +105,7 @@
                     <productDataVersion>${confluence.data.version}</productDataVersion>
                     <enableQuickReload>true</enableQuickReload>
                     <enableFastdev>false</enableFastdev>
+                    <allowGoogleTracking>false</allowGoogleTracking>
 
                     <!-- See here for an explanation of default instructions: -->
                     <!-- https://developer.atlassian.com/docs/advanced-topics/configuration-of-instructions-in-atlassian-plugins -->
@@ -121,13 +122,11 @@
 
                         <!-- Add package import here -->
                         <Import-Package>
-                            org.springframework.osgi.*;resolution:="optional",
                             org.eclipse.gemini.blueprint.*;resolution:="optional",
                             com.atlassian.plugin.osgi.bridge.external,
                             com.atlassian.confluence.plugin.descriptor.web.conditions.user;resolution:="optional",
                             com.atlassian.confluence.plugin.descriptor.web.conditions;resolution:="optional",
                             com.atlassian.confluence.mail.notification.actions;resolution:="optional",
-                            com.atlassian.confluence.pages.persistence.dao.*;resolution:="optional",
                             *;resolution:=optional
                         </Import-Package>
 

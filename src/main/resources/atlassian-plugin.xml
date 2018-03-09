@@ -119,17 +119,17 @@
 
     <!-- Template for Brief -->
     <content-template key="iso-brief-template" i18n-name-key="iso-brief-template" template-title-key="iso.blueprint.brief.title">
-        <resource name="template" type="download" location="/templates/iso_brief_template2.xml" />
+        <resource name="Brief" type="download" location="/templates/iso_brief_template.xml" />
     </content-template>
 
     <!-- Template for Release Note -->
     <content-template key="iso-release-note-template" i18n-name-key="iso-release-note-template" template-title-key="iso.blueprint.release-note.title">
-        <resource name="template" type="download" location="/templates/iso_release_note_template.xml" />
+        <resource name="Release-Note" type="download" location="/templates/iso_release_note_template.xml" />
     </content-template>
 
     <!-- Template for Change Request  -->
     <content-template key="iso-change-request-template" i18n-name-key="iso-change-request-template" template-title-key="iso.blueprint.change-request.title">
-        <resource name="template" type="download" location="/templates/iso_change_request_template.xml" />
+        <resource name="Change-Request" type="download" location="/templates/iso_change_request_template.xml" />
     </content-template>
 
 </atlassian-plugin>

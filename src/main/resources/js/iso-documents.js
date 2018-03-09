@@ -22,11 +22,11 @@ AJS.toInit(function($) {
 
 		var docType = state.pageData.templatekey;
 
-        if (docType == "com.itg.plugins.iso.blueprints.brief") {
+        if (docType == "Brief") {
             state.nextPageId = "briefProperties";
-        } else if (docType == "com.itg.plugins.iso.blueprints.releaseNote") {
+        } else if (docType == "Release Note") {
             state.nextPageId = "releaseNoteProperties";
-        } else if (docType == "com.itg.plugins.iso.blueprints.changeRequest") {
+        } else if (docType == "Change Request") {
         	state.nextPageId = "changeRequestProperties";
     	} else {
             //no selection

@@ -1,26 +1,28 @@
-#hello-blueprint-page-description {
-    resize: none;
-}
-
-input, textarea {
-    max-width: 300px;
+#wiki-markup-form {
     width: 100%;
-    padding: 4px 5px;
+    height: 100%;
+    overflow: hidden;
+    padding-right: 10px;
 }
 
-.blueprint-about {
-    float: right;
-    width: 300px;
-    padding: 20px;
+#wiki-markup {
+    width: 100%;
+    height: 75%;
+    overflow: auto;
 }
 
-.hello-blueprint-about > h1 {
-    margin: 0;
-    font-size: 14px;
+#wiki-markup-form #page-title {
+    width: 100%;
 }
 
-/* AUI overrides */
+#wiki-markup-form div.error { font-colour: #ff0000;}
 
-fieldset {
-    padding: 10px;
+#wiki-markup textarea{
+	width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-position: bottom right;
+	background-repeat: no-repeat;
 }
