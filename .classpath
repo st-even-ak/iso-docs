@@ -1192,6 +1192,6 @@
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/steve.killelay/.m2/repository/com/atlassian/upm/upm-api/2.15/upm-api-2.15-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/steve.killelay/Downloads/org.springframework.context-3.0.4.release.jar/org.springframework.context-3.0.4.release.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/org.springframework.context-3.0.4.release.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

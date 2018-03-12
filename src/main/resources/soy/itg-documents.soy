@@ -1,0 +1,527 @@
+{namespace com.itg.plugins.itg.blueprints}
+/**
+*	Template creation first page
+*	Choose a template to complete
+*/
+{template .templateSelectionForm}
+	<form id="templateSelectionForm" action="#" method="post" class="aui">
+		<h3>
+			{getText('itg.blueprint.wizard.templateSelectionForm.desc.content')}
+		</h3>
+		<fieldset>
+			<div class="field-group">
+			<label for="templatekey">{getText('itg.blueprint.wizard.templateSelectionForm.label.templatekey')}</label>
+			    <select id="templatekey" class="select" name="templatekey">
+			        <option value="{getText('itg.blueprint.wizard.templateSelectionForm.templateOption.brief.key')}">
+			        	{getText('itg.blueprint.wizard.templateSelectionForm.templateOption.brief.title')}
+			        </option>
+			        <option value="{getText('itg.blueprint.wizard.templateSelectionForm.templateOption.change-request.key')}">
+			        	{getText('itg.blueprint.wizard.templateSelectionForm.templateOption.change-request.title')}
+			        </option>
+			        <option value="{getText('itg.blueprint.wizard.templateSelectionForm.templateOption.release-note.key')}">
+			        	{getText('itg.blueprint.wizard.templateSelectionForm.templateOption.release-note.title')}
+			        </option>
+			    </select>
+			</div>
+			<div class="field-group">
+			    <label for="clientkey">{getText('itg.blueprint.wizard.templateSelectionForm.label.client')}</label>
+			    <select id="clientkey" class="select" name="clientkey">
+			    	<!-- need to drive this list dynamically with list and logos -->
+			        <option value="client-id-Audi">Audi</option>
+			        <option value="client-id-Bayer">Bayer</option>
+			        <option value="client-id-J&J">J&J</option>
+			        <option value="client-id-LG">LG</option>
+			        <option value="client-id-MP">Motorpoint</option>
+			        <option value="client-id-MSD">MSD</option>
+			        <option value="client-id-TUI">TUI</option>
+			        <option value="client-id-UM">Unitymedia</option>
+			        <option value="client-id-VMIE">Virgin Media IE</option>
+			        <option value="client-id-VMUK">Virgin Media UK</option>
+			        <option value="client-id-VT">Virgin Trains</option>
+			        <option value="client-id-VW">Volkswagen</option>
+			        <option value="client-id-Wacoal">Wacoal / Eveden</option>
+			        <option value="client-id-Wickes">Wickes</option>
+			        <option value="client-id-Ziggo">Ziggo</option>
+			    </select>
+			</div>
+			<div class="field-group">
+			    <label for="varDocumentStatus">{getText('itg.blueprint.wizard.templateSelectionForm.label.documentstatus')}</label>
+			    <select id="varDocumentStatus" class="select" name="varDocumentStatus">
+			        <option value="confidential">Confidential</option>
+			        <option value="internal">Internal</option>
+			        <option value="public">Public</option>
+			    </select>
+			</div>
+		</fieldset>
+	</form>
+{/template}
+/**
+*	Sets the properties of the brief
+*/
+{template .briefProperties}
+    <form id="briefProperties" action="#" method="post" class="aui">
+      <fieldset>
+        <div class="field-group">
+            <label for="varTitle">{getText('itg.blueprint.form.label.title.varBriefTitle')}</label>
+            <input id="varTitle" type="text" name="varTitle"/><span style="color:red">*</span>
+            <div id="varTitle" class="error"></div>
+			<label for="varProposer">{getText('itg.blueprint.form.label.title.varBriefProposer')}</label>
+            <input id="varProposer" type="text" name="varProposer"/><span style="color:red">*</span><br />
+            <div id="varProposer" class="error"></div>
+            <label for="varBusinessArea">{getText('itg.blueprint.form.label.title.varBriefBusinessArea')}</label>
+            <input id="varBusinessArea" type="text" name="varBriefBusinessArea"/><span style="color:red">*</span><br />
+            <div id="varBusinessArea" class="error"></div>
+            <label for="varAuthoriser">{getText('itg.blueprint.form.label.title.varBriefAuthoriser')}</label>
+            <input id="varAuthoriser" type="text" name="varAuthoriser"/><span style="color:red">*</span><br />
+            <div id="varAuthoriser" class="error"></div>
+            <input id="varEmailAddress" type="hidden" name="varEmailAddress" />
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the Summary of details
+*/
+{template .briefSummary}
+    <form id="briefSummary" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-briefSummary')}
+	        </div>
+	        <textarea id="wiki-markup-briefSummary" name="wikiBriefSummary"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefSummary" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the background
+*/
+{template .briefBackground}
+    <form id="briefBackground" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-briefBackground')}
+	        </div>
+	        <textarea id="wiki-markup-briefBackground" name="wikiBriefBackground"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefBackground" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the main objectives
+*/
+{template .briefObjectives}
+    <form id="briefObjectives" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-briefObjectives')}
+	        </div>
+	        <textarea id="wiki-markup-briefObjectives" name="wikiBriefObjectives"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefObjectives" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the Key Business Requirements
+*/
+{template .briefRequirements}
+    <form id="briefRequirements" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-briefRequirements')}
+	        </div>
+	        <textarea id="wiki-markup-briefRequirements" name="wikiBriefRequirements"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefRequirements" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the details of scope
+*/
+{template .briefScope}
+    <form id="briefScope" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-briefScope')}
+	        </div>
+	        <textarea id="wiki-markup-briefScope" name="wikiBriefScope"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefScope" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter a description of the Benefits
+*/
+{template .briefBenefits}
+    <form id="briefBenefits" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-briefBenefits')}
+	        </div>
+	        <textarea id="wiki-markup-briefBenefits" name="wikiBriefBenefits"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefBenefits" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the Timeframe
+*/
+{template .briefTimeframe}
+    <form id="briefTimeframe" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-briefTimeframe')}
+	        </div>
+	        <textarea id="wiki-markup-briefTimeframe" name="wikiBriefTimeframe"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefTimeframe" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter details of any known risks
+*/
+{template .briefRisks}
+    <form id="briefRisks" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-briefRisks')}
+	        </div>
+	        <textarea id="wiki-markup-briefRisks" name="wikiBriefRisks"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefRisks" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter details of any known constraints
+*/
+{template .briefConstraints}
+    <form id="briefConstraints" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-briefConstraints')}
+	        </div>
+	        <textarea id="wiki-markup-briefConstraints" name="wikiBriefConstraints"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefConstraints" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter details of key stakeholders
+*/
+{template .briefStakeholders}
+    <form id="briefStakeholders" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-briefStakeholders')}
+	        </div>
+	        <textarea id="wiki-markup-briefStakeholders" name="wikiBriefStakeholders"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-briefStakeholders" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+
+/**
+*
+*
+*
+*	Change-Request
+*
+*
+*
+*/
+{template .changeRequestProperties}
+    <form id="changeRequestProperties" action="#" method="post" class="aui">
+      <fieldset>
+        <div class="field-group">
+            <label for="varTitle">{getText('itg.blueprint.form.label.title.varchangeRequestTitle')}</label>
+            <input id="varTitle" type="text" name="varTitle"/><span style="color:red">*</span>
+            <div id="varTitle" class="error"></div>
+			<label for="varProposer">{getText('itg.blueprint.form.label.title.varchangeRequestProposer')}</label>
+            <input id="varProposer" type="text" name="varProposer"/><span style="color:red">*</span><br />
+            <div id="varProposer" class="error"></div>
+            <label for="varBusinessArea">{getText('itg.blueprint.form.label.title.varchangeRequestBusinessArea')}</label>
+            <input id="varBusinessArea" type="text" name="varchangeRequestBusinessArea"/><span style="color:red">*</span><br />
+            <div id="varBusinessArea" class="error"></div>
+            <label for="varAuthoriser">{getText('itg.blueprint.form.label.title.varchangeRequestAuthoriser')}</label>
+            <input id="varAuthoriser" type="text" name="varAuthoriser"/><span style="color:red">*</span><br />
+            <div id="varAuthoriser" class="error"></div>
+            <input id="varEmailAddress" type="hidden" name="varEmailAddress" />
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the Summary of details
+*/
+{template .changeRequestSummary}
+    <form id="changeRequestSummary" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-changeRequestSummary')}
+	        </div>
+	        <textarea id="wiki-markup-changeRequestSummary" name="wikichangeRequestSummary"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-changeRequestSummary" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the background
+*/
+{template .changeRequestBackground}
+    <form id="changeRequestBackground" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-changeRequestBackground')}
+	        </div>
+	        <textarea id="wiki-markup-changeRequestBackground" name="wikichangeRequestBackground"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-changeRequestBackground" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the main objectives
+*/
+{template .changeRequestObjectives}
+    <form id="changeRequestObjectives" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-changeRequestObjectives')}
+	        </div>
+	        <textarea id="wiki-markup-changeRequestObjectives" name="wikichangeRequestObjectives"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-changeRequestObjectives" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the Key Business Requirements
+*/
+{template .changeRequestRequirements}
+    <form id="changeRequestRequirements" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-changeRequestRequirements')}
+	        </div>
+	        <textarea id="wiki-markup-changeRequestRequirements" name="wikichangeRequestRequirements"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-changeRequestRequirements" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the details of scope
+*/
+{template .changeRequestScope}
+    <form id="changeRequestScope" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-changeRequestScope')}
+	        </div>
+	        <textarea id="wiki-markup-changeRequestScope" name="wikichangeRequestScope"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-changeRequestScope" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter a description of the Benefits
+*/
+{template .changeRequestBenefits}
+    <form id="changeRequestBenefits" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-changeRequestBenefits')}
+	        </div>
+	        <textarea id="wiki-markup-changeRequestBenefits" name="wikichangeRequestBenefits"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-changeRequestBenefits" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter the Timeframe
+*/
+{template .changeRequestTimeframe}
+    <form id="changeRequestTimeframe" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-changeRequestTimeframe')}
+	        </div>
+	        <textarea id="wiki-markup-changeRequestTimeframe" name="wikichangeRequestTimeframe"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-changeRequestTimeframe" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter details of any known risks
+*/
+{template .changeRequestRisks}
+    <form id="changeRequestRisks" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-changeRequestRisks')}
+	        </div>
+	        <textarea id="wiki-markup-changeRequestRisks" name="wikichangeRequestRisks"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-changeRequestRisks" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter details of any known constraints
+*/
+{template .changeRequestConstraints}
+    <form id="changeRequestConstraints" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-changeRequestConstraints')}
+	        </div>
+	        <textarea id="wiki-markup-changeRequestConstraints" name="wikichangeRequestConstraints"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-changeRequestConstraints" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Enter details of key stakeholders
+*/
+{template .changeRequestStakeholders}
+    <form id="changeRequestStakeholders" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-changeRequestStakeholders')}
+	        </div>
+	        <textarea id="wiki-markup-changeRequestStakeholders" name="wikichangeRequestStakeholders"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-changeRequestStakeholders" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*
+*
+*
+*	Release-note
+*
+*
+*
+*/
+{template .releaseNoteProperties}
+    <form action="#" id="releaseNoteProperties" method="post" class="aui">
+      <fieldset class="field-group">
+        <div>         
+            <label for="varTitle">{getText('itg.blueprint.form.label.title.varRelease-NoteTitle')}</label>
+            <input id="varTitle" type="text" name="varTitle"/><span style="color:red">*</span>
+            <div id="varTitle" class="error"></div>
+			<label for="varProposer">{getText('itg.blueprint.form.label.title.varRelease-NoteProposer')}</label>
+            <input id="varProposer" type="text" name="varProposer"/><span style="color:red">*</span><br />
+            <div id="varProposer" class="error"></div>
+            <label for="varAuthoriser">{getText('itg.blueprint.form.label.title.varRelease-NoteAuthoriser')}</label>
+            <input id="varAuthoriser" type="text" name="varAuthoriser"/><span style="color:red">*</span><br />
+            <div id="varAuthoriser" class="error"></div>
+            <input id="varEmailAddress" type="hidden" name="varEmailAddress" />
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Summary
+*/
+{template .releaseNoteSummary}
+    <form id="wiki-markup-form" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-releaseNoteSummary')}
+	        </div>
+	        <textarea id="wiki-markup-releaseNoteSummary" name="wikiBriefSummary"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-releaseNoteSummary" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Method Statement
+**/
+{template .releaseNoteMethodStatement}
+    <form id="wiki-markup-form" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-releaseNoteMethodStatement')}
+	        </div>
+	        <textarea id="wiki-markup-releaseNoteMethodStatement" name="wikiBriefSummary"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-releaseNoteMethodStatement" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Authority
+**/
+{template .releaseNoteRisks}
+    <form id="wiki-markup-form" action="#" method="post" class="aui">
+      <fieldset>
+      	<div class="field-group">
+	        <div>
+	            {getText('itg.blueprint.form.label.title.wiki-markup-releaseNoteRisks')}
+	        </div>
+	        <textarea id="wiki-markup-releaseNoteRisks" name="wikiReleaseNoteRisks"></textarea><span style="color:red">*</span><br />
+	        <div id="wiki-markup-releaseNoteRisks" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}
+/**
+*	Authority
+**/
+{template .releaseNoteAuthority}
+    <form id="wiki-markup-form" action="#" method="post" class="aui">
+      <fieldset>
+        <div class="field-group">
+            <label for="varClientApprover">{getText('itg.blueprint.form.label.title.varReleaseNoteClientApprover')}</label>
+            <input id="varClientApprover" class="text" type="text" name="varClientApprover"><span style="color:red">*</span>
+            <div id="varClientApprover" class="error"></div>
+			<label for="varTechApprover">{getText('itg.blueprint.form.label.title.varReleaseNoteTechApprover')}</label>
+            <input id="varTechApprover" class="text" type="text" name="varTechApprover"><span style="color:red">*</span><br />
+            <div id="varTechApprover" class="error"></div>
+            <label for="varSolutionApprover">{getText('itg.blueprint.form.label.title.varReleaseNoteSolutionApprover')}</label>
+            <input id="varSolutionApprover" class="text" type="text" name="varSolutionApprover"><span style="color:red">*</span><br />
+            <div id="varSolutionApprover" class="error"></div>
+        </div>
+      </fieldset>
+    </form>
+{/template}

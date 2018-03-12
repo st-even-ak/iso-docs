@@ -1,0 +1,198 @@
+<div>
+	<ac:structured-macro ac:name="panel" ac:schema-version="1">
+	  <ac:parameter ac:name="title">System Description</ac:parameter>
+	  <ac:rich-text-body>
+	    <table class="wrapped">
+	      <colgroup>
+	        <col/>
+	        <col/>
+	      </colgroup>
+	      <tbody>
+	        <tr>
+	          <th>JIRA ID</th>
+	          <td>varJIRA</td>
+	        </tr>
+	        <tr>
+	          <th>Author</th>
+	          <td>$Author$</td>
+	        </tr>
+	        <tr>
+	          <th>Server Details</th>
+	          <td><at:var at:name="varServerDetails"/></td>
+	        </tr>
+	        <tr>
+	          <th>Description</th>
+	          <td><at:var at:name="wikiReleaseDescription" at:rawXhtml='true'/></td>
+	        </tr>
+	        <tr>
+	          <th>Request Date</th>
+	          <td>$varCreatedDate$</td>
+	        </tr>
+	        <tr>
+	          <th>Requested By</th>
+	          <td><at:var at:name="varProposer"/></td>
+	        </tr>
+	        <tr>
+	          <th>Summary of Outcome from this Change</th>
+	          <td><at:var at:name="wikiReleaseNoteSummary" at:rawXhtml='true'/></td>
+	        </tr>
+	        <tr>
+	          <th>Potential Risks</th>
+	          <td><at:var at:name="wikiReleaseNoteRisk" at:rawXhtml='true'/></td>
+	        </tr>
+	        <tr>
+	          <th>Timescale for the Release to be Carried out</th>
+	          <td><at:var at:name="varTimeScale"/></td>
+	        </tr>
+	        <tr>
+	          <th>Method Statement</th>
+	          <td><at:var at:name="wikiReleaseNoteMethodStatement" at:rawXhtml='true'/></td>
+	        </tr>
+	        <tr>
+	          <th>Release Window</th>
+	          <td><at:var at:name="varReleaseWindow"/></td>
+	        </tr>
+	      </tbody>
+	    </table>
+	  </ac:rich-text-body>
+	</ac:structured-macro>
+	<ac:structured-macro ac:name="panel" ac:schema-version="1">
+	  <ac:parameter ac:name="title">Approval and Authorisation</ac:parameter>
+	  <ac:rich-text-body>
+	    <table class="wrapped">
+	      <colgroup>
+	        <col/>
+	        <col/>
+	      </colgroup>
+	      <tbody>
+	        <tr>
+	          <th>Role</th>
+	          <th>Name(s)</th>
+	        </tr>
+	        <tr>
+	          <th>
+	            <p class="ProcTableText">Client Approval</p>
+	          </th>
+	          <td>''USE Signer Macro</td>
+	        </tr>
+	        <tr>
+	          <th>
+	            <span>Technical Approval</span>
+	          </th>
+	          <td>
+	            <br/>
+	          </td>
+	        </tr>
+	        <tr>
+	          <th>Solution Approval</th>
+	          <td>
+	            <br/>
+	          </td>
+	        </tr>
+	      </tbody>
+	    </table>
+	  </ac:rich-text-body>
+	</ac:structured-macro>
+	<ac:structured-macro ac:name="panel" ac:schema-version="1">
+	  <ac:parameter ac:name="title">Post Release Confirmation</ac:parameter>
+	  <ac:rich-text-body>
+	    <table class="wrapped">
+	      <colgroup>
+	        <col/>
+	        <col/>
+	        <col/>
+	        <col/>
+	      </colgroup>
+	      <tbody>
+	        <tr>
+	          <th>Role</th>
+	          <th>Summary of Action</th>
+	          <th colspan="1">Completed?</th>
+	          <th>
+	            <span>Name(s)</span>
+	          </th>
+	        </tr>
+	        <tr>
+	          <td>
+	            <br/>
+	          </td>
+	          <td>
+	            <br/>
+	          </td>
+	          <td>
+
+	          </td>
+	          <td>
+	            <br/>
+	          </td>
+	        </tr>
+	      </tbody>
+	    </table>
+	  </ac:rich-text-body>
+	</ac:structured-macro>
+	<ac:structured-macro ac:name="panel" ac:schema-version="1">
+	  <ac:rich-text-body>
+	    <h2>
+	      <span>Further Reference Documents </span>
+	    </h2>
+	    <p>
+	      <ac:structured-macro ac:name="attachments" ac:schema-version="1"/>
+	    </p>
+	  </ac:rich-text-body>
+	</ac:structured-macro>
+	<ac:structured-macro ac:name="panel" ac:schema-version="1">
+	<ac:rich-text-body>
+	    <h2>Document Control</h2>
+	    <h3>Purpose of this Document</h3>
+	    <p>The purpose of this document is for the proposer of a new initiative desiring work from ITG, to provide some initial briefing information about their proposal to ITG.<br />
+	    This initial Brief should include the key objectives of the proposed project, the potential anticipated benefits (opportunities it will enable to be maximised or problems it is seeking to address), and any particular constraints, dependencies, mission-critical or regulatory timings the proposer may be aware of and wish to highlight. </p>
+	    The document should describe your key business needs, outlining what you are seeking to be able to do and achieve via the initiative.<br />
+	    The Brief should be sufficient to be used as an initial reference for a first evaluation to be conducted with ITG, in order for ITG to asses, consult with you and follow-up with a proposal of possible solution route(s) and an associated initial work-sizing and pricing estimate in response.<br />
+	    <h3>
+	      <strong>Documents Control Statement</strong>
+	    </h3>
+	    <p>The following outlines the access, handling, communication and disposal guidelines that are followed by The Information Assurance Programme for this document based on the assigned classification. For this document, which has a classification of <strong>CONFIDENTIAL</strong>, the following is recommended:</p>
+	    <h4>Access Guidelines</h4>
+	    <ul>
+	      <li>
+	        CONFIDENTIAL. Please refer to corporate policy for further details.
+	      </li>
+	    </ul>
+	    <h4>Handling Guidelines</h4>
+	    <ul>
+	      <li>
+	        Documents will be stored on the ITG SharePoint system.
+	      </li>
+	      <li>
+	        Where hardcopies of documents are created, they will be stored under lock and key.
+	      </li>
+	    </ul>
+	    <h4>Communications Guidelines</h4>
+	    <ul>
+	      <li>
+	        Documents which are to be communicated external to ITG must be produced in protected PDF format, with the ‘copy text’ function disabled.
+	      </li>
+	      <li>
+	        Documents that are created within the Microsoft office suite of products must have ‘Information Rights Management’ enabled, where possible, to control distribution within ITG
+	      </li>
+	      <li>
+	        Documents that are communicated external to ITG must be done so in line with corporate policy.
+	      </li>
+	    </ul>
+	    <h4>Disposal Guidelines</h4>
+	    <ul>
+	      <li>
+	        All copies of this document will be disposed of in line with corporate policy.
+	      </li>
+	    </ul>
+    </ac:rich-text-body>
+	</ac:structured-macro>
+	<ac:structured-macro ac:name="panel" ac:schema-version="1">
+	  <ac:rich-text-body>
+	    <h2>Version History</h2>
+	    <p>
+	      <ac:structured-macro ac:name="change-history" ac:schema-version="1"/>
+	    </p>
+	  </ac:rich-text-body>
+	</ac:structured-macro>
+</div>
